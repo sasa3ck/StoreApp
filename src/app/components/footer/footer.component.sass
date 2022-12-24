@@ -1,0 +1,61 @@
+@import "../../../assets/fonts/fonts"
+
+.footer-wrapper
+  background-image: url(https://arena.km.ua/wp-content/uploads/3538533.jpg)
+  padding: 50px 0 30px 0
+
+.footer
+  width: 80%
+  margin: 0 auto
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  & .desc
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    & img
+      margin: 0 auto
+      width: 140px
+      padding-bottom: 15px
+  & p
+    @include w500
+    font-size: 1.1rem
+  & li.cursor-pointer:hover
+    filter: invert(48%) sepia(12%) saturate(4816%) hue-rotate(188deg) brightness(94%) contrast(85%)
+    transition: .5s
+  & .list-name
+    @include w700
+    font-size: 1.4rem
+    border-bottom: 1px solid gray
+    border-top-left-radius: 15px
+    border-bottom-right-radius: 15px
+    display: inline-flex
+    margin-left: 15px
+    padding-right: 10px
+  & .list-info
+    @include w500
+    font-size: 1.1rem
+  & .arrow
+    width: 18px
+    height: 12px
+    margin: auto 0
+  & .net
+    width: 42px
+    height: 32px
+    margin: auto 0
+    box-shadow: 1px 1px 2px 1px gray
+    padding: 5px 10px
+  & .contact
+    width: 28px
+    height: 28px
+    margin: auto 0
+
+@media (max-width: 1024px)
+  .footer
+    grid-template-columns: repeat(2, 1fr)
+    gap: 15px
+
+@media (max-width: 770px)
+  .footer
+    grid-template-columns: repeat(1, 1fr)
+    gap: 15px

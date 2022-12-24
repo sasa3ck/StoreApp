@@ -1,0 +1,17 @@
+@import "../../../assets/fonts/fonts"
+
+.error
+  @include w500
+  @include adaptiv-font(20, 14)
+  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(0,236,255,1) 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  & button
+    display: flex
+    font-weight: 900
+    align-items: center
+    text-align: center
+    font-size: 32px
+    background: red
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent

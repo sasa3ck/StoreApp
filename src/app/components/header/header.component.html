@@ -1,0 +1,183 @@
+<div class="header flex my-2 w-[80%]">
+  <div class="burger-links flex justify-center items-center mr-5">
+    <img
+      [src]="bullet_points"
+      alt="bullet_points"
+      class="cursor-pointer z-20"
+      (click)="toggleBurgerMenu()"
+    />
+    <div
+      class="wrapper-burger"
+      *ngIf="isBurgerMenuOpen"
+      (click)="wrapperMenu()"
+    ></div>
+    <div class="absolute burger-menu" *ngIf="isBurgerMenuOpen">
+      <ul>
+        <li>
+          <a
+            routerLink="/"
+            class="mx-2 px-8 py-1"
+            (click)="isBurgerMenuOpen = false"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="#" class="mx-2 px-8 py-1" (click)="isBurgerMenuOpen = false"
+            >Section</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/about"
+            class="mx-2 px-8 py-1"
+            (click)="isBurgerMenuOpen = false"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/intList"
+            class="mx-2 px-8 py-1"
+            (click)="isBurgerMenuOpen = false"
+            >Popular designers</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/extList"
+            class="mx-2 px-8 py-1"
+            (click)="isBurgerMenuOpen = false"
+            >Online Store</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/galery"
+            class="mx-2 px-8 py-1"
+            (click)="isBurgerMenuOpen = false"
+            >Galery</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/contacts"
+            class="mx-2 px-8 py-1"
+            (click)="isBurgerMenuOpen = false"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <a routerLink="/" class="cursor-pointer flex items-center">
+    <img [src]="proto" alt="proto" class="logo" width="120" />
+  </a>
+  <div class="links flex ml-9 w-[100%]">
+    <ul class="flex items-center">
+      <li>
+        <a routerLink="/" class="mx-2 px-8 py-1 home">Home</a>
+      </li>
+      <li>
+        <a href="#" class="mx-2 px-8 py-1 Section">Section</a>
+      </li>
+      <li>
+        <a routerLink="/about" class="mx-2 px-8 py-1 About">About Us</a>
+      </li>
+      <li>
+        <a routerLink="/intList" class="mx-2 px-8 py-1 list-1">Popular designers</a>
+      </li>
+      <li>
+        <a routerLink="/extList" class="mx-2 px-8 py-1 list-2">Online Store</a>
+      </li>
+      <li>
+        <a routerLink="/galery" class="mx-2 px-8 py-1 Galery">Gallery</a>
+      </li>
+      <li>
+        <a routerLink="/contacts" class="mx-2 px-8 py-1 Contact">Contact Us</a>
+      </li>
+    </ul>
+    <div
+      class="wrapper-burger bg-slate-600"
+      *ngIf="isMenuOpen"
+      (click)="wrapperMenu()"
+    ></div>
+    <div class="menu-links relative">
+      <img [src]="points" alt="points" (click)="toggleMenu()" />
+      <div
+        class="absolute top-12 right-0 w-[180px] py-3 shadow-lg rounded-xl z-10"
+        *ngIf="isMenuOpen"
+      >
+        <ul class="flex flex-col items-center">
+          <li>
+            <a
+              routerLink="/"
+              class="mx-2 px-8 py-1 home-menu hidden"
+              (click)="isMenuOpen = false"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="mx-2 px-8 py-1 Section-menu hidden"
+              (click)="isMenuOpen = false"
+              >Section</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/about"
+              class="mx-2 px-8 py-1 About-menu hidden"
+              (click)="isMenuOpen = false"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/intList"
+              class="mx-2 px-8 py-1 list-1-menu hidden"
+              (click)="isMenuOpen = false"
+              >Popular designers</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/extList"
+              class="mx-2 px-8 py-1 list-2-menu hidden"
+              (click)="isMenuOpen = false"
+              >Online Store</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/galery"
+              class="mx-2 px-8 py-1 Galery-menu hidden"
+              (click)="isMenuOpen = false"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/contacts"
+              class="mx-2 px-8 py-1 Contact-menu hidden"
+              (click)="isMenuOpen = false"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="login flex px-5 items-center">
+      <div class="flex items-center cursor-pointer mx-1 px-1">
+        <img [src]="login" alt="login" class="w-[25px] h-[25px]" />
+        <a routerLink="/login" class="p-1">Login</a>
+      </div>
+      <!-- <div class="flex items-center cursor-pointer mx-1 px-1">
+        <img [src]="register" alt="register" class="w-[25px] h-[25px]" />
+        <a href="#" class="p-1">Register</a>
+      </div> -->
+    </div>
+  </div>
+</div>

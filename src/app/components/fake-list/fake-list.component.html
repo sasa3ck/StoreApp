@@ -1,0 +1,23 @@
+<div class="flex justify-center">
+  <div class="my-10">
+    <div></div>
+    <div class="card">
+      <div class="imgBox">
+        <img [src]="fakeList.image" [alt]="fakeList.image" />
+      </div>
+      <div class="content">
+        <div class="details">
+          <h2>{{ fakeList.title }}</h2>
+          <div class="data">
+            <h3>{{ fakeList.category }}<br><span>Caterogy</span></h3>
+            <h3>{{ fakeList.price }}<br><span>Price</span></h3>
+          </div>
+          <div class="actionBtn">
+            <button>Buy</button>
+            <button>More info...</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

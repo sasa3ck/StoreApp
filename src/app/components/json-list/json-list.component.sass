@@ -1,0 +1,31 @@
+@import "../../../assets/fonts/fonts"
+
+.message
+  margin: 25px auto
+  width: 90%
+  height: 250px
+  box-shadow: 0 15px 80px rgba(0, 0, 0, 0.35)
+  & h2
+    border-top: 1px solid #4481de
+    @include w700
+    @include adaptiv-font(20, 16)
+  & h3
+    border-top: 1px solid #4481de
+    @include w500
+    @include adaptiv-font(18, 14)
+  & p
+    border-bottom: 1px solid #4481de
+    @include w500
+    @include adaptiv-font(16, 12)
+  &:hover
+    width: 100%
+    background: #4481de
+    transition: .5s
+  &:hover h2, &:hover h3, &:hover p
+    color: white
+    transition: .7s
+  &:hover p
+    border-bottom: none
+
+
+

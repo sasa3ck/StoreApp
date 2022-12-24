@@ -1,0 +1,71 @@
+.list
+  position: relative
+  display: flex
+  align-items: center
+  padding: 10px
+  margin: 10px 0
+  cursor: pointer
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    background: rgb(57, 158, 220)
+    transition: transform 0.5s
+    transform: scaleX(0)
+    transform-origin: right
+  &:hover::before
+    transition: transform 0.5s
+    transform: scaleX(1)
+    transform-origin: left
+  & .imgBx
+    position: relative
+    min-width: 70px
+    height: 70px
+    background: #fff
+    overflow: hidden
+    border: 6px solid white
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1)
+    margin-right: 20px
+    margin-left: 10px
+    & img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+  & .content
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    color: #333
+    & .rank
+      position: absolute
+      right: 0
+      font-size: 2em
+      color: #fff
+      transform: scale(0)
+      transition: .5s
+    & span
+      font-weight: 500
+      opacity: 0.25
+    & h4
+      font-weight: 600
+      text-transform: uppercase
+      transition: .5s
+      line-height: 1.2em
+    & p
+      opacity: 0.85
+      transition: .5s
+      max-width: 400px
+      margin-right: 35px
+
+.list:hover .content .rank
+  transform: scale(1)
+  transition: .5s
+
+.list:hover h4, .list:hover p
+  color: #fff

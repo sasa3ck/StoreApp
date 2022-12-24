@@ -1,0 +1,50 @@
+<div>
+  <app-global-error></app-global-error>
+  <div class="container mx-auto my-5 pt-8 pb-1 grid grid-cols-2">
+    <div class="col-span-1">
+      <div class="flex justify-center mb-5 search">
+        <input
+          type="text"
+          class="border-b-2 py-2 px-4 w-[50%]"
+          placeholder="Filter..."
+          [(ngModel)]="filter"
+        />
+      </div>
+      <p *ngIf="fakeLoading" class="text-center text-lg">Loading...</p>
+      <!-- <div *ngIf="fakeStore$ | async as fakeStore">
+        <app-fake-list
+          *ngFor="let fItem of fakeStore | filter : filter; let i = index"
+          [fakeList]="fItem"
+        ></app-fake-list>
+      </div> -->
+      <div *ngIf="FakeStores.fakeProduct">
+        <app-fake-list
+          *ngFor="let fItem of FakeStores.fakeProduct | filter : filter; let i = index"
+          [fakeList]="fItem"
+        ></app-fake-list>
+      </div>
+    </div>
+
+    <div class="col-span-1">
+      <p *ngIf="jsonLoading" class="text-center text-lg">Loading...</p>
+      <app-json-list
+        *ngFor="let jItem of jsonStore; let i = index"
+        [jsonList]="jItem"
+      ></app-json-list>
+    </div>
+
+    <app-modal
+      *ngIf="modalService.isVisible$ | async"
+      title="Create new product"
+    >
+      <app-create-fake-item></app-create-fake-item>
+    </app-modal>
+
+    <button
+      class="rounded-full bg-red-700 text-white fixed right-5 bottom-5 py-2 px-4 text-lg"
+      (click)="modalService.open()"
+    >
+      +
+    </button>
+  </div>
+</div>

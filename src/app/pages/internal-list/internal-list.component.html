@@ -1,0 +1,16 @@
+<div>
+  <div class="container mx-auto my-5 flex">
+    <div class="flex justify-center items-center">
+      <div class="imgBx">
+        <img [src]="vi_pie" />
+      </div>
+    </div>
+    <div class="box">
+      <h3>Popular List</h3>
+      <app-local-list
+        *ngFor="let lItem of list; let i = index"
+        [localList]="lItem"
+      ></app-local-list>
+    </div>
+  </div>
+</div>

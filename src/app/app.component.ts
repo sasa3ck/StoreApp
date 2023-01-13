@@ -5,4 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass'],
 })
-export class AppComponent {}
+export class AppComponent {
+  scroll_img: string = 'assets/home-img/level-up.png';
+  scrollTop() {
+    document.getElementById('myScroll')!.scrollIntoView({ behavior: 'smooth' });
+  }
+}

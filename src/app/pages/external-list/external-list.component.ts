@@ -26,6 +26,7 @@ export class ExternalListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    document.getElementById('arrow-up')!.style.display = 'flex';
     this.fakeLoading = true;
     this.jsonLoading = true;
 

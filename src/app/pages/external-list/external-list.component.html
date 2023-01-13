@@ -1,6 +1,6 @@
 <div>
   <app-global-error></app-global-error>
-  <div class="container mx-auto my-5 pt-8 pb-1 grid grid-cols-2">
+  <div class="container mx-auto my-5 pt-8 pb-1 grid lg:grid-cols-2 grid-cols-1">
     <div class="col-span-1">
       <div class="flex justify-center mb-5 search">
         <input
@@ -19,7 +19,10 @@
       </div> -->
       <div *ngIf="FakeStores.fakeProduct">
         <app-fake-list
-          *ngFor="let fItem of FakeStores.fakeProduct | filter : filter; let i = index"
+          *ngFor="
+            let fItem of FakeStores.fakeProduct | filter : filter;
+            let i = index
+          "
           [fakeList]="fItem"
         ></app-fake-list>
       </div>

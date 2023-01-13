@@ -12,6 +12,12 @@ export class ContactsComponent implements OnInit {
   phone: string = 'assets/images/phone-contacts.png';
   email: string = 'assets/images/email-contacts.png';
 
+  twitter: string = 'assets/contact-img/twitter.svg';
+  whatsapp: string = 'assets/contact-img/whatsapp.svg';
+  youtube: string = 'assets/contact-img/youtube.svg';
+
   constructor() {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    document.getElementById('arrow-up')!.style.display = 'none';
+  }
 }

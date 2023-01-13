@@ -1,5 +1,8 @@
 @import "../../../assets/fonts/fonts"
 
+.wrapper-about
+  margin: 80px auto
+
 .wrapper
   position: relative
   width: 900px
@@ -109,13 +112,6 @@
     height: 250px
     border-radius: 10px
     overflow: hidden
-    & img
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      object-fit: cover
   & .textBx
     display: flex
     justify-content: center
@@ -156,42 +152,63 @@
       &:hover
         filter: invert(43%) sepia(82%) saturate(1541%) hue-rotate(184deg) brightness(99%) contrast(92%)
 
+.lg-content
+  display: none
+
 .content-info
-  & .content-img
-    max-width: 100%
-    width: 500px
-    border-radius: 5px
-    overflow: hidden
-    position: relative
-    padding: 25px
-    &::before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      width: 85px
-      height: 85px
-      border-left: 7px solid $orange
-      border-top: 7px solid $orange
-    &::after
-      content: ''
-      position: absolute
-      bottom: 0
-      right: 0
-      width: 85px
-      height: 85px
-      border-right: 7px solid $orange
-      border-bottom: 7px solid $orange
-  & .content-text
-    max-width: 100%
-    width: 500px
-    & h2
-      @include Besley_700
-      font-size: 2.5rem
-    & h5
-      @include Besley_500
-      font-size: 1.5rem
-  & img
+    max-width: 500px
     width: 100%
-    height: 100%
-    object-fit: cover
+    & .content-img
+      margin: 15px
+      border-radius: 5px
+      overflow: hidden
+      position: relative
+      padding: 25px
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 85px
+        height: 85px
+        border-left: 7px solid $orange
+        border-top: 7px solid $orange
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 85px
+        height: 85px
+        border-right: 7px solid $orange
+        border-bottom: 7px solid $orange
+    & .content-text
+      max-width: 500px
+      width: 100%
+      & h2
+        @include Besley_700
+        @include adaptiv-font(40, 30)
+      & h5
+        @include Besley_500
+        @include adaptiv-font(24, 18)
+    & img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+@media (max-width: 1740px)
+  .wrapper-about
+    flex-direction: column
+    margin: 0 auto
+  .content-info, .wrapper
+    margin: 70px auto 0 auto
+
+@media (max-width: 1068px)
+  .wrapper
+    display: none
+  .lg-content
+    display: flex
+
+@media (max-width: 410px)
+  .lg-content ul li a img
+    width: 25px

@@ -1,3 +1,5 @@
+@import "../../../assets/fonts/fonts"
+
 .box
   position: relative
   min-width: 425px
@@ -35,3 +37,26 @@
     border-top-left-radius: 150px
     border-bottom-left-radius: 15px
     box-shadow: 0 35px 50px rgba(0, 0, 0, 0.1)
+
+@media (max-width: 1324px)
+  .imgBx
+    width: 600px
+    height: 600px
+
+@media (max-width: 1072px)
+  .imgBx
+    width: 400px
+    height: 400px
+
+@media (max-width: 920px)
+  .imgBx
+    display: none
+  .wrapper-box
+    margin: 10px auto
+  .box
+    margin: 10px
+
+@media (max-width: 520px)
+  .box
+    min-width: 225px
+    max-width: 600px

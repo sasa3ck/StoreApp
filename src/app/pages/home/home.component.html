@@ -16,44 +16,53 @@
       <div class="absolute left-0 right-0">
         <div class="grid sm:grid-cols-4 grid-cols-2 partner-date">
           <div class="sm:col-span-1 col-span-2 text-center sm:text-left">
-            <h1>Your digital partner</h1>
+            <h1>What awaits you</h1>
             <h5 class="flex sm:justify-start justify-center">
-              <img [src]="checked" alt="checked" class="mr-2" /> Sustainable
-              data centers
+              <img [src]="checked" alt="checked" class="mr-2" /> New fashion
             </h5>
             <h5 class="flex sm:justify-start justify-center">
-              <img [src]="checked" alt="checked" class="mr-2" /> ISO-certified
-              security
+              <img [src]="checked" alt="checked" class="mr-2" /> Quality service
             </h5>
             <h5 class="flex sm:justify-start justify-center">
-              <img [src]="checked" alt="checked" class="mr-2" /> Expert support
+              <img [src]="checked" alt="checked" class="mr-2" /> Stores all over
+              the world
             </h5>
           </div>
           <div class="sm:col-span-3 col-span-2">
-            <img [src]="tech" alt="tech" class="rounded-lg" />
+            <img [src]="fashion" class="rounded-lg" />
           </div>
         </div>
-        <div class="grid lg:grid-cols-4 grid-cols-2 partner-info absolute rounded-lg">
-          <div>
-            <img [src]="domains" alt="domains" />
-            <h3>22,000,000</h3>
-            <p>domains</p>
-          </div>
-          <div>
-            <img [src]="planet" alt="planet" />
-            <h3>8,900,000</h3>
-            <p>customer contracts</p>
-          </div>
-          <div>
-            <img [src]="server_pro" alt="server_pro" />
-            <h3>100,000</h3>
-            <p>servers</p>
-          </div>
-          <div>
-            <img [src]="employees" alt="employees" />
-            <h3>4,000</h3>
-            <p>employees</p>
-          </div>
+        <div
+          class="grid lg:grid-cols-4 grid-cols-2 partner-info absolute rounded-lg"
+        >
+          <section>
+            <div>
+              <img [src]="clothes" />
+              <h3>100,000+</h3>
+              <p>Clothes</p>
+            </div>
+          </section>
+          <section>
+            <div>
+              <img [src]="bags" />
+              <h3>2,000+</h3>
+              <p>Accessories</p>
+            </div>
+          </section>
+          <section>
+            <div>
+              <img [src]="hairdresser" />
+              <h3>150+</h3>
+              <p>Stylists</p>
+            </div>
+          </section>
+          <section>
+            <div>
+              <img [src]="shopping" />
+              <h3>400+</h3>
+              <p>Stores</p>
+            </div>
+          </section>
         </div>
       </div>
     </div>
@@ -62,50 +71,49 @@
     <div class="container mx-auto">
       <div class="my-10 mx-4 product">
         <div class="pb-3">
-          <h1>Real solutions for real web pros</h1>
-          <h2>That’s code for IONOS.</h2>
+          <h1>Real solutions for true connoisseurs of fashion</h1>
+          <h2>Be stylish and unique</h2>
         </div>
         <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-4">
-          <div class="preview lg:pr-3 relative pr-0">
-            <img [src]="world" alt="world" class="rounded-lg" />
-            <div class="absolute bottom-0 text-white px-11 pb-8">
-              <p>Deploy Now</p>
-              <h2 class="pb-3">
-                Deploy your code on fast, reliable hosting without leaving
-                GitHub
-              </h2>
-              <a routerLink="/">Try it for free</a
-              ><span class="pl-2">&#8658;</span>
-              <div></div>
+          <div class="preview lg:pr-3 pr-0 relative">
+            <div>
+              <img [src]="maxresdefault" class="rounded-lg" />
+            </div>
+            <div class="absolute bottom-2 left-4">
+              <a routerLink="/" class="flex items-center justify-center"
+                >Try it for free <img [src]="forward" class="forward ml-5"
+              /></a>
             </div>
           </div>
           <div class="grid sm:grid-cols-2 grid-cols-1 grid-rows-2 gap-3 parts">
             <div class="p-5 rounded-lg part relative">
               <div class="flex justify-end pb-2">
-                <img [src]="hosting" alt="hosting" width="50px" height="50px" />
+                <img [src]="uniform_school" width="50px" height="50px" />
               </div>
               <div class="pb-14">
-                <h6>Dedicated hosting</h6>
+                <h6>School uniform</h6>
                 <h4>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Labore, cupiditate.
                 </h4>
               </div>
               <div class="flex text-center pt-2 absolute bottom-4">
-                <a routerLink="/">See plans</a><span class="pl-2">&#8658;</span>
+                <a routerLink="/" class="flex"
+                  >See plans<img [src]="chevron" class="chevron ml-2"
+                /></a>
               </div>
             </div>
             <div class="p-5 rounded-lg part relative">
               <div class="flex justify-end pb-2">
                 <img
-                  [src]="wordpress"
+                  [src]="uniform_walk"
                   alt="wordpress"
                   width="50px"
                   height="50px"
                 />
               </div>
               <div class="pb-14">
-                <h6>Managed WordPress</h6>
+                <h6>Clothes for a walk</h6>
                 <h4>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Aperiam saepe totam vel eius delectus, eveniet adipisci ex
@@ -114,37 +122,48 @@
                 </h4>
               </div>
               <div class="flex text-center pt-2 absolute bottom-4">
-                <a routerLink="/">See plans</a><span class="pl-2">&#8658;</span>
+                <a routerLink="/" class="flex"
+                  >See plans<img [src]="chevron" class="chevron ml-2"
+                /></a>
               </div>
             </div>
             <div class="p-5 rounded-lg part relative">
               <div class="flex justify-end pb-2">
-                <img [src]="server" alt="server" width="50px" height="50px" />
+                <img
+                  [src]="uniform_training"
+                  alt="server"
+                  width="50px"
+                  height="50px"
+                />
               </div>
               <div class="pb-14">
-                <h6>Managed server</h6>
+                <h6>Training uniform</h6>
                 <h4>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quibusdam, cupiditate dolor? Quo amet temporibus dolorum!
                 </h4>
               </div>
               <div class="flex text-center pt-2 absolute bottom-4">
-                <a routerLink="/">See plans</a><span class="pl-2">&#8658;</span>
+                <a routerLink="/" class="flex"
+                  >See plans<img [src]="chevron" class="chevron ml-2"
+                /></a>
               </div>
             </div>
             <div class="p-5 rounded-lg part relative">
               <div class="flex justify-end pb-2">
-                <img [src]="backup" alt="backup" width="50px" height="50px" />
+                <img [src]="accesori" alt="backup" width="50px" height="50px" />
               </div>
               <div class="pb-14">
-                <h6>Cloud Backup</h6>
+                <h6>Useful accessories</h6>
                 <h4>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit,
                   magni.
                 </h4>
               </div>
               <div class="flex text-center pt-2 absolute bottom-4">
-                <a routerLink="/">See plans</a><span class="pl-2">&#8658;</span>
+                <a routerLink="/" class="flex"
+                  >See plans <img [src]="chevron" class="chevron ml-2"
+                /></a>
               </div>
             </div>
           </div>
@@ -153,10 +172,12 @@
     </div>
   </section>
   <section class="container mx-auto">
-    <div class="grid lg:grid-cols-2 lg:gap-0 gap-3 grid-cols-1 mt-10 mb-4 mx-4 items-center galery">
+    <div
+      class="grid lg:grid-cols-2 lg:gap-0 gap-3 grid-cols-1 mt-10 mb-4 mx-4 items-center galery"
+    >
       <div>
-        <h1>Galery Informations</h1>
-        <h3 class="my-7">
+        <h1>About our stores</h1>
+        <h3 class="my-7 max-w-[700px]">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
           eligendi mollitia corrupti tempore iure animi, blanditiis minus eos
           est perspiciatis quam deleniti ab voluptas repellendus soluta
@@ -164,12 +185,12 @@
           nisi quae? Accusamus, dolore, nobis iure et, perferendis odio ipsum
           modi eum praesentium delectus ducimus.
         </h3>
-        <a routerLink="/galery" class="cursor-pointer relative"
+        <a routerLink="/about" class="cursor-pointer relative"
           >See more... <span class="text-3xl absolute">&raquo;</span></a
         >
       </div>
       <div class="flex justify-center">
-        <img [src]="galery" alt="galery" />
+        <img [src]="store" />
       </div>
     </div>
   </section>

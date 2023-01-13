@@ -1,4 +1,4 @@
-<div class="flex justify-center">
+<div class="flex justify-center" [id]="'card' + fakeList.id">
   <div class="my-10">
     <div></div>
     <div class="card">
@@ -9,12 +9,13 @@
         <div class="details">
           <h2>{{ fakeList.title }}</h2>
           <div class="data">
-            <h3>{{ fakeList.category }}<br><span>Caterogy</span></h3>
-            <h3>{{ fakeList.price }}<br><span>Price</span></h3>
+            <h3>{{ fakeList.category }}<br /><span>Caterogy</span></h3>
+            <h3>{{ fakeList.price }}<br /><span>Price</span></h3>
           </div>
           <div class="actionBtn">
             <button>Buy</button>
-            <button>More info...</button>
+            <button>More...</button>
+            <button (click)="del(fakeList)"><img [src]="deleted" /></button>
           </div>
         </div>
       </div>

@@ -8,12 +8,12 @@
 
 .panel
   & div
-    @include w500
+    @include Besley_500
     @include adaptiv-font(20, 16)
     display: flex
     align-items: center
   & a
-    @include w500
+    @include Besley_500
     position: relative
     background: #27282c
     color: #27282c
@@ -77,13 +77,13 @@
 
 .galery
   & h1
-    @include w900
+    @include Besley_700
     @include adaptiv-font(64, 32)
   & h3
-    @include w500
+    @include Besley_500
     @include adaptiv-font(24, 16)
   & a
-    @include w500
+    @include Besley_500
     @include adaptiv-font(24, 16)
     color: #1e9bff
   & a span
@@ -91,6 +91,9 @@
   & a:hover span
     right: -30px
     transition: .5s
+  & img
+    border-radius: 15px
+    box-shadow: 0 5px 18px #ccc
 
 //// //// //// //// --> Section Product <-- //// //// //// ////
 
@@ -100,18 +103,21 @@
 
 .product
   & h1
-    @include w900
+    @include Besley_900
     @include adaptiv-font(35, 26)
   & h2
-    @include w500
+    @include Besley_500
     @include adaptiv-font(32, 22)
     color: rgba(155, 155, 155, 0.9)
 
 .parts
   & .part
     box-shadow: 0 0 10px #cfcaca
+    &:hover
+      box-shadow: 0 10px 40px #cfcaca
+      transition: .5s
   & h4
-    @include w700
+    @include Besley_700
     @include adaptiv-font(20, 14)
     display: -webkit-box
     -webkit-line-clamp: 5
@@ -119,35 +125,38 @@
     overflow: hidden
     height: 7.4em
   & h6
-    @include w500
+    @include Besley_500
     @include adaptiv-font(20, 14)
     color: rgba(155, 155, 155, 0.9)
   & a
-    @include w500
+    @include Besley_500
     @include adaptiv-font(22, 16)
-    border-bottom: 2px solid #1e9bff
-  & span
-    @include adaptiv-font(26, 18)
-    filter: invert(48%) sepia(12%) saturate(4816%) hue-rotate(188deg) brightness(94%) contrast(85%)
+  & .chevron
+    width: 40px
+  & a:hover img
+    transform: translateX(15px)
+    transition: .5s
 
 .preview
   & p
-    @include w500
+    @include Besley_900
     @include adaptiv-font(22, 10)
   & h2
-    @include w900
+    @include Besley_900
     @include adaptiv-font(32, 12)
     color: white
   & img
     width: 100%
     height: 100%
     object-fit: cover
+  & .forward
+    width: 60px
   & a
-    @include w500
-    @include adaptiv-font(22, 10)
+    @include Besley_500
+    @include adaptiv-font(32, 18)
     border-bottom: 2px solid #1e9bff
   & span
-    @include adaptiv-font(25, 17)
+    @include adaptiv-font(32, 18)
     filter: invert(48%) sepia(12%) saturate(4816%) hue-rotate(188deg) brightness(94%) contrast(85%)
 
 //// //// //// //// --> Section Partner <-- //// //// //// ////
@@ -162,10 +171,10 @@
     height: 250px
     object-fit: cover
   & h1
-    @include w700
+    @include Besley_700
     @include adaptiv-font(24, 14)
   & h5
-    @include w500
+    @include Besley_500
     @include adaptiv-font(18, 12)
     margin: 12px 5px
     & img
@@ -179,26 +188,34 @@
     right: 0
     z-index: 2
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%)
-    & div
+    & section div
       padding: 0 25px
       display: flex
       flex-direction: column
       justify-content: center
       align-items: center
-      margin: 20px 0
-    & div:not(:last-child)
+    & section:not(:last-child)
       border-right: 1px solid gray
+    & section
+      padding: 20px 0
+      &:hover
+        transition: .5s
+        box-shadow: 0 15px 30px #ccc
     & img
       width: 65px
       height: 65px
     & h3
-      @include w700
+      @include Besley_700
       font-size: 1.5rem
       @include adaptiv-font(24, 16)
     & p
-      @include w500
+      @include Besley_500
+      padding: 0 15px
       font-size: 1.3rem
       @include adaptiv-font(20, 12)
+      border: 5px solid transparent
+      border-image: linear-gradient(to left top,#adf2f7 10%,  transparent 30%, transparent 70%, #adf2f7 90%)
+      border-image-slice: 1
 
 @media (max-width: 1536px)
   .partner
@@ -210,7 +227,7 @@
     margin: auto 15px 130px 15px
   .partner-info
     bottom: -250px
-    & div:nth-child(2)
+    & section:nth-child(2)
       border-right: none
 
 @media (max-width: 639px)
@@ -225,5 +242,5 @@
   .partner-info
     grid-template-columns: repeat(1, 1fr)
     bottom: -660px
-    & div:nth-child(3), div:nth-child(1)
+    & section:nth-child(3), section:nth-child(1)
       border-right: none

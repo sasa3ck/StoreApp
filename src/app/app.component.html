@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" id="myScroll">
   <app-header></app-header>
 
   <div class="main">
@@ -6,4 +6,11 @@
   </div>
 
   <app-footer></app-footer>
+
+  <button
+    class="rounded-full fixed right-5 bottom-5 py-2 px-4 text-lg" id="arrow-up"
+    (click)="scrollTop()"
+  >
+    <img [src]="scroll_img" width="40px" />
+  </button>
 </div>

@@ -1,110 +1,112 @@
-<div class="">
+<div>
   <div class="container mx-auto">
-    <h1 class="flex justify-center items-center py-5">
-      {{ title | uppercase }}
-    </h1>
-    <div class="grid grid-cols-3">
-      <div class="flex items-center flex-col">
-        <img [src]="address" alt="address" width="75px" />
-        <h3>address</h3>
-        <div class="flex items-center flex-col mt-2">
-          <h4>875 W. Summit Ave</h4>
-          <p>Bozeman, MT 59715</p>
-          <p>Richardson, MT 23715</p>
+    <div class="flex flex-col items-center py-5 pre-info">
+      <h1>
+        {{ title | uppercase }}
+      </h1>
+      <p class="mx-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam iusto
+        officiis officia atque aspernatur. Quidem cupiditate quis ullam veniam
+        pariatur modi aperiam, fugiat illum, officia dolor praesentium aut
+        perferendis incidunt?
+      </p>
+    </div>
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-10">
+      <div class="content-info">
+        <div class="inline-block">
+          <div class="mb-11 flex imbBx-1">
+            <div class="flex justify-center items-center">
+              <img [src]="address" class="mr-5 img-1" />
+            </div>
+            <div>
+              <h3>Address</h3>
+              <div class="flex gap-5 contact-address">
+                <div>
+                  <p>Bozeman, MT 59715</p>
+                  <p>Richardson, 23715</p>
+                  <p>Klamath Falls, MA 01970</p>
+                </div>
+                <div>
+                  <p>3934 Heavens Way</p>
+                  <p>Horseshoe Lane</p>
+                  <p>Meadville, PA 16335</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-11 flex imbBx-2">
+            <div class="flex justify-center items-center">
+              <img [src]="phone" class="mr-5 img-2" />
+            </div>
+            <div>
+              <h3>Phone</h3>
+              <div class="flex gap-3">
+                <div>
+                  <p>610-613-5119</p>
+                  <p>201-479-6338</p>
+                </div>
+                <div>
+                  <p>267-349-5187</p>
+                  <p>504-328-8726</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-11 flex imbBx-3">
+            <div class="flex justify-center items-center">
+              <img [src]="email" class="mr-5 img-3" />
+            </div>
+            <div>
+              <h3>Email</h3>
+              <p>beinhauer@illinoisscno.org</p>
+              <p>fixay50s@areo.ru</p>
+              <p>willyblu@icmarottabasile.it</p>
+            </div>
+          </div>
         </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>418 8th Street</h4>
-          <p>Meadville, PA 16335</p>
-        </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>5 S. Brickyard Street</h4>
-          <p>Klamath Falls, MA 01970</p>
-          <p>Richardson, MA 45370</p>
-          <p>Salem, MA 02370</p>
-        </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>Charlotte</h4>
-          <p>Kooter Lane</p>
-          <p>3710 Foley Street</p>
-        </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>Fort Lauderdale</h4>
-          <p>Smith Street</p>
-          <p>3934 Heavens Way</p>
-          <p>Horseshoe Lane</p>
+        <div class="connect-with-us flex justify-center items-center">
+          <h4 class="mr-3">Connect with us</h4>
+          <ul class="relative flex items-center">
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="flex items-center flex-col">
-        <img [src]="phone" alt="phone" width="75px" />
-        <h3>phone</h3>
-        <div class="flex items-center flex-col mt-2">
-          <h4>Summit Central</h4>
-          <p>484-424-5195</p>
-          <p>610-613-5119</p>
-          <p>201-479-6338</p>
-          <p>908-670-2727</p>
-        </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>875 W. Summit Ave</h4>
-          <p>484-424-5195</p>
-          <p>610-613-5119</p>
-        </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>418 8th Street</h4>
-          <p>717-303-7371</p>
-        </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>5 S. Brickyard Street</h4>
-          <p>267-349-5187</p>
-          <p>504-328-8726</p>
-        </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>Charlotte</h4>
-          <p>504-239-7627</p>
-          <p>857-250-6590</p>
-        </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>Fort Lauderdale</h4>
-          <p>508-745-4025</p>
-          <p>865-980-1514</p>
-          <p>865-724-4264</p>
-        </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>Fort support</h4>
-          <p>605-994-0274</p>
-          <p>605-319-7307</p>
-          <p>265-734-4566</p>
-        </div>
-      </div>
-      <div class="flex items-center flex-col">
-        <img [src]="email" alt="email" width="75px" />
-        <h3>email</h3>
-        <div class="flex items-center flex-col mt-2">
-          <h4>875 W. Summit Ave</h4>
-          <p>namazi@goliszek.net</p>
-          <p>willyblu@icmarottabasile.it</p>
-        </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>Charlotte</h4>
-          <p>beinhauer@illinoisscno.org</p>
-          <p>fixay50s@areo.ru</p>
-        </div>
-        <div class="flex items-center flex-col mt-2">
-          <h4>Fort Lauderdale</h4>
-          <p>udbgcsl@areosur.org</p>
-          <p>fixayTesla@mir.com</p>
-          <form class="form-contact flex items-center flex-col">
-            <h4>Send Message</h4>
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <button>Send</button>
+      <div class="mx-5 my-9 sm:m-9">
+        <div class="content-form">
+          <form>
+            <div class="inputBox flex justify-between items-center">
+              <h2>Send Message</h2>
+              <div class="submit-btn">
+                <input type="submit" value="Send" class="btn" />
+                <i></i>
+              </div>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="" required />
+              <span>Full Name</span>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="" required />
+              <span>Email</span>
+            </div>
+            <div class="inputBox">
+              <textarea required></textarea>
+              <span>Message...</span>
+            </div>
           </form>
         </div>
       </div>
     </div>
   </div>
-  <div class="h-[200px] flex justify-center">
-    <img [src]="waves" alt="waves" class="w-[80%] h-[100%]" />
-  </div>
+  <!-- <div class="h-[200px] flex justify-center">
+    <img [src]="waves" alt="waves" class="w-[100vw] h-[100%]" />
+  </div> -->
 </div>

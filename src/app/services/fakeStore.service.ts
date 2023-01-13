@@ -15,6 +15,7 @@ export class FakeStores {
   constructor(private http: HttpClient, private errorService: ErrorService) {}
 
   fakeProduct: fakeStoreApi[] = [];
+  jsonProduct: jsonplaceholder[] = [];
 
   getFakeStore(): Observable<fakeStoreApi[]> {
     return this.http
@@ -36,6 +37,38 @@ export class FakeStores {
         tap((p) => {
           this.fakeProduct.push(p);
           console.log(this.fakeProduct);
+        })
+      );
+  }
+
+  updateFakeProduct(id: number, product: fakeStoreApi): Observable<fakeStoreApi> {
+    const card = document.getElementById('card' + id) as HTMLElement;
+    console.log('id', id);
+    return this.http.put<fakeStoreApi>(
+      'https://fakestoreapi.com/products',
+      product
+    )
+    .pipe(
+      tap((p) => {
+        this.fakeProduct.filter((s) => {
+          s.id !== id;
+        });
+        card.style.display = 'none';
+        this.fakeProduct.push(p);
+      })
+    );
+  }
+
+  deleteFakeProduct(id: number) {
+    const card = document.getElementById('card' + id) as HTMLElement;
+    return this.http
+      .delete<fakeStoreApi>('https://fakestoreapi.com/products/' + id)
+      .pipe(
+        tap(() => {
+          this.fakeProduct.filter((s) => {
+            s.id !== id;
+          });
+          card.style.display = 'none'
         })
       );
   }

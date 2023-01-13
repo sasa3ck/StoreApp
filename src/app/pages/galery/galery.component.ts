@@ -54,5 +54,7 @@ export class GaleryComponent implements OnInit {
   ] as Array<Image>;
 
   constructor() {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    document.getElementById('arrow-up')!.style.display = 'flex';
+  }
 }

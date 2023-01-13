@@ -1,30 +1,46 @@
 @import "../../../assets/fonts/fonts"
 
+.wrapper-header
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px
+
 .header
   margin: 5px auto
 
 .logo
   max-width: 120px
-  // min-height: 50px
 
 .links
   & li a
-    border-bottom: 1px solid #486faa
-    border-top-left-radius: 15px
-    border-bottom-right-radius: 15px
-    @include w500
-    font-size: 1.2rem
-    &:hover
-      background: #4481de
-      transition: .8s
+    @include Besley_700
+    @include adaptiv-font(20, 16)
+    line-height: 1em
+    letter-spacing: 2px
+    text-transform: uppercase
+    position: relative
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5)
+    padding: 5px 15px
+    &::before
+      content: attr(data-text)
+      position: absolute
+      top: 6px
+      color: var(--clr)
+      width: 0
+      overflow: hidden
+      transition: 1s
+      border-right: 5px solid var(--clr)
+      -webkit-text-stroke: 1px var(--clr)
+    &:hover::before
+      width: 85%
+      filter: drop-shadow(0 0 25px var(--clr))
 
 .login
   @include w500
-  font-size: 1.2rem
+  @include adaptiv-font(20, 16)
   & div
     &:hover
       filter: invert(48%) sepia(12%) saturate(4816%) hue-rotate(188deg) brightness(94%) contrast(85%)
-      transition: .5s
+      transition: 1s
+      letter-spacing: 3px
 
 .menu-links
   display: none
@@ -36,7 +52,7 @@
   & img
     width: 38px
     height: 28px
-    
+
 .wrapper-burger
   position: absolute
   top: 0
@@ -51,7 +67,7 @@
   z-index: 5
   top: 0
   left: 0
-  width: 250px
+  width: 280px
   height: 100%
   box-shadow: 0 0 10px #cfcaca
   & ul
@@ -62,43 +78,38 @@
   & li
     margin: 10px
     & a
-      border-bottom: 1px solid #486faa
-      border-top-left-radius: 15px
-      border-bottom-right-radius: 15px
-      @include w500
+      // border-bottom: 1px solid #486faa
+      // border-top-left-radius: 15px
+      // border-bottom-right-radius: 15px
+      @include Besley_500
       font-size: 1.2rem
-      &:hover
-        background: #4481de
-        transition: .8s
+      // &:hover
+      //   background: #4481de
+      //   transition: .8s
 
-@media (max-width: 1600px)
+@media (max-width: 1750px)
   .Contact
     display: none
   .Contact-menu
     display: flex
   .menu-links
     display: flex
-@media (max-width: 1475px)
+@media (max-width: 1630px)
   .Galery
     display: none
   .Galery-menu
     display: flex
-@media (max-width: 1300px)
+@media (max-width: 1420px)
   .list-2
     display: none
   .list-2-menu
     display: flex
-@media (max-width: 1090px)
+@media (max-width: 1124px)
   .list-1
     display: none
   .list-1-menu
     display: flex
-@media (max-width: 875px)
-  .About
-    display: none
-  .About-menu
-    display: flex
-@media (max-width: 730px)
+@media (max-width: 720px)
   .links
     display: none
   .burger-links

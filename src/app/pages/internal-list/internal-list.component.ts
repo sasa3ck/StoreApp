@@ -13,5 +13,7 @@ export class InternalListComponent implements OnInit {
   vi_pie: string = 'assets/local-img/vi-pie.png';
 
   constructor() {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    document.getElementById('arrow-up')!.style.display = 'flex';
+  }
 }

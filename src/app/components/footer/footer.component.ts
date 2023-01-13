@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   proto: string = 'assets/images/proto.png';
   dimensions: string = 'assets/images/dimensions.png';
-  arrow: string = 'assets/images/arrow.png';
-  facebook: string = 'assets/images/facebook.png';
-  instagram: string = 'assets/images/instagram.png';
-  linkedin: string = 'assets/images/linkedin.png';
-  adress: string = 'assets/images/maps.png';
-  phone: string = 'assets/images/phone.png';
-  mail: string = 'assets/images/email.png';
+  // arrow: string = 'assets/images/arrow.png';
+  // facebook: string = 'assets/images/facebook.png';
+  // instagram: string = 'assets/images/instagram.png';
+  // linkedin: string = 'assets/images/linkedin.png';
+  // adress: string = 'assets/images/maps.png';
+  // phone: string = 'assets/images/phone.png';
+  // mail: string = 'assets/images/email.png';
 
   constructor() {}
 

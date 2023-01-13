@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,20 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   button = 'Find out more';
-  galery: string = 'assets/images/galery.svg';
-  hosting: string = 'assets/images/hosting.png';
-  wordpress: string = 'assets/images/wordpress.png';
-  server: string = 'assets/images/server.png';
-  backup: string = 'assets/images/backup.png';
+  uniform_school: string = 'assets/home-img/uniform-school.png';
+  uniform_walk: string = 'assets/home-img/uniform-walk.png';
+  uniform_training: string = 'assets/home-img/uniform-training.png';
+  accesori: string = 'assets/home-img/accesori.png';
   checked: string = 'assets/images/checked.png';
-  tech: string = 'assets/images/tech.jpg';
-  world: string = 'assets/images/world.jpg';
-  domains: string = 'assets/images/domains.svg';
-  server_pro: string = 'assets/images/server_pro.svg';
-  planet: string = 'assets/images/planet.svg';
-  employees: string = 'assets/images/employees.svg';
+  forward: string = 'assets/home-img/forward.png';
+  chevron: string = 'assets/home-img/chevron.png';
+  maxresdefault: string = 'assets/home-img/maxresdefault.png';
+  fashion: string = 'assets/home-img/fashion-accessories-clothes.jpg';
+  bags: string = 'assets/home-img/bags.png';
+  clothes: string = 'assets/home-img/clothes.png';
+  hairdresser: string = 'assets/home-img/hairdresser.png';
+  shopping: string = 'assets/home-img/shopping.png';
+  store: string = 'assets/home-img/about-store.jpg';
+
 
   constructor() {}
+  ngOnInit(): void {
+    document.getElementById('arrow-up')!.style.display = 'flex';
+  }
 
-  ngOnInit(): void {}
+  scrollTop() {
+    document.getElementById('myScroll')!.scrollIntoView({ behavior: 'smooth' });
+  }
 }

@@ -6,7 +6,7 @@ export interface localList {
 }
 
 export interface fakeStoreApi {
-  id?: number;
+  id: number;
   title: string;
   description?: string;
   price: number;

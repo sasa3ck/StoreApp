@@ -1,62 +1,90 @@
-<div>
-  <div class="container mx-auto my-20">
-    <div class="flex justify-between mx-2">
-      <div class="content-info">
-        <div class="content-img mb-5">
-          <img [src]="thoughts" [alt]="thoughts" />
-        </div>
-        <div class="content-text">
-          <h2 class="text-center">What do you want ?!</h2>
-          <h5 class="text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-            repellendus, ipsam ex deserunt inventore nulla quae libero. Soluta
-            numquam sint quidem modi magnam, hic est obcaecati, molestiae
-            laboriosam deserunt voluptas! Ab nihil perferendis reprehenderit
-            ratione aliquid ipsa nam quo fugit vitae dolores libero, impedit
-            cumque neque debitis voluptatibus non sit?
-          </h5>
+<div class="container mx-auto">
+  <div class="wrapper-about flex justify-between mx-2">
+    <div class="content-info">
+      <div class="content-img">
+        <img [src]="thoughts" />
+      </div>
+      <div class="content-text">
+        <h2 class="text-center">What do you want ?!</h2>
+        <h5 class="text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+          repellendus, ipsam ex deserunt inventore nulla quae libero. Soluta
+          numquam sint quidem modi magnam, hic est obcaecati, molestiae
+          laboriosam deserunt voluptas! Ab nihil perferendis reprehenderit
+          ratione aliquid ipsa nam quo fugit vitae dolores libero, impedit
+          cumque neque debitis voluptatibus non sit?
+        </h5>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="icon">
+        <div
+          class="imgBx"
+          *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]"
+          style="--i: {{ +item }}"
+        >
+          <img src="assets/about-img/a{{ +item }}.jpg" />
         </div>
       </div>
-      <div class="wrapper">
-        <div class="icon">
-          <div
-            class="imgBx"
-            *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]"
-            style="--i: {{ +item }}"
-          >
-            <img src="assets/about-img/a{{ +item }}.jpg" />
+      <div class="content">
+        <div class="contentBx" *ngFor="let i of items" id="content{{ +i.id }}">
+          <div class="card">
+            <div class="imgBox">
+              <img src="assets/about-img/a{{ +i.id }}.jpg" />
+            </div>
+            <div class="textBx">
+              <h2 class="text-center">
+                {{ i.name }}<br />
+                <h6>{{ i.text }}</h6>
+              </h2>
+              <ul class="sci">
+                <li>
+                  <a href="#"><img [src]="fb" /></a>
+                </li>
+                <li>
+                  <a href="#"><img [src]="twit" /></a>
+                </li>
+                <li>
+                  <a href="#"><img [src]="ln" /></a>
+                </li>
+                <li>
+                  <a href="#"><img [src]="inst" /></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="content">
-          <div
-            class="contentBx"
-            *ngFor="let i of items"
-            id="content{{ +i.id }}"
-          >
-            <div class="card">
-              <div class="imgBox">
-                <img src="assets/about-img/a{{ +i.id }}.jpg" />
-              </div>
-              <div class="textBx">
-                <h2 class="text-center">
-                  {{ i.name }}<br />
-                  <h6>{{ i.text }}</h6>
-                </h2>
-                <ul class="sci">
-                  <li>
-                    <a href="#"><img [src]="fb" /></a>
-                  </li>
-                  <li>
-                    <a href="#"><img [src]="twit" /></a>
-                  </li>
-                  <li>
-                    <a href="#"><img [src]="ln" /></a>
-                  </li>
-                  <li>
-                    <a href="#"><img [src]="inst" /></a>
-                  </li>
-                </ul>
-              </div>
+      </div>
+    </div>
+    <div class="lg-content">
+      <div class="mx-auto mt-5">
+        <div *ngFor="let i of items" id="content{{ +i.id }}">
+          <div class="flex justify-center items-center m-2">
+            <div class="relative w-[150px] h-[150px]">
+              <img
+                src="assets/about-img/a{{ +i.id }}.jpg"
+                class="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+              />
+            </div>
+            <div class="max-w-[300px] w-full">
+              <h2 class="text-center font-bold">
+                {{ i.name }}<br />
+                <h6 class="font-normal">{{ i.text }}</h6>
+              </h2>
+              <ul class="flex justify-center items-center gap-3 mt-5">
+                <li>
+                  <a href="#"><img [src]="fb" width="40px" /></a>
+                </li>
+                <li>
+                  <a href="#"><img [src]="twit" width="40px" /></a>
+                </li>
+                <li>
+                  <a href="#"><img [src]="ln" width="40px" /></a>
+                </li>
+                <li>
+                  <a href="#"><img [src]="inst" width="40px" /></a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

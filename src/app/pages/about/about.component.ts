@@ -68,5 +68,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    document.getElementById('arrow-up')!.style.display = 'none';
+  }
 }

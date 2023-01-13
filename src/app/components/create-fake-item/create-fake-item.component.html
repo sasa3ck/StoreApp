@@ -6,12 +6,37 @@
     formControlName="title"
     appFocus
   />
-  <!-- title.touched - фокус -->
+  <input
+    type="text"
+    class="border w-full py-2 px-4 mb-2"
+    placeholder="Product price"
+    formControlName="price"
+  />
+  <input
+    type="text"
+    class="border w-full py-2 px-4 mb-2"
+    placeholder="Product description"
+    formControlName="description"
+  />
   <p
     class="text-red-600 font-medium mb-2"
     *ngIf="title.errors?.minlength && title.touched"
   >
     Incorect title length. Now {{ title.value.length }}
   </p>
-  <button type="submit" class="py-2 px-4 bg-blue-600 text-white">Create</button>
+  <div class="flex justify-between items-center">
+    <select formControlName="category">
+      <option
+        *ngFor="let item of selectCategory"
+        [disabled]="item.disabled"
+        [ngValue]="item.name"
+      >
+        {{ item.name }}
+      </option>
+    </select>
+
+    <button type="submit" class="py-2 px-4 bg-blue-600 text-white">
+      Create
+    </button>
+  </div>
 </form>

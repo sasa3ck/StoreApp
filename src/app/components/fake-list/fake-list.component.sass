@@ -69,9 +69,8 @@
   .actionBtn
     display: flex
     justify-content: space-between
-    // gap: 20px
-    & button
-      padding: 10px 30px
+    & button:not(:nth-child(3))
+      padding: 5px 20px
       border-radius: 5px
       border-top-right-radius: 25px
       border: none
@@ -80,10 +79,20 @@
       @include adaptiv-font(16, 12)
       background: #4481de
       color: #fff
-    & button:nth-child(2)
-      border-top-right-radius: 5px
-      border-bottom-left-radius: 25px
-      border: 1px solid #999
-      color: #999
-      background: #fff
+      &:nth-child(2)
+        border-radius: 5px
+        border: 1px solid #4481de
+        border-bottom-left-radius: 25px
+        background: #fff
+        color: #4481de
+    & img
+      width: 40px
+      &:hover
+        opacity: 0.7
+        transition: .5s
 
+@media (max-width: 420px)
+  .card
+    width: 300px
+  .actionBtn button
+    padding: 5px 15px

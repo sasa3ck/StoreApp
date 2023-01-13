@@ -1,3 +1,5 @@
+@import "../../../assets/fonts/fonts"
+
 .list
   position: relative
   display: flex
@@ -57,11 +59,13 @@
       text-transform: uppercase
       transition: .5s
       line-height: 1.2em
+      @include adaptiv-font(16, 8)
     & p
       opacity: 0.85
       transition: .5s
       max-width: 400px
       margin-right: 35px
+      @include adaptiv-font(14, 7)
 
 .list:hover .content .rank
   transform: scale(1)

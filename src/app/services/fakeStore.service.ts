@@ -41,34 +41,19 @@ export class FakeStores {
       );
   }
 
-  updateFakeProduct(id: number, product: fakeStoreApi): Observable<fakeStoreApi> {
-    const card = document.getElementById('card' + id) as HTMLElement;
-    console.log('id', id);
-    return this.http.put<fakeStoreApi>(
-      'https://fakestoreapi.com/products',
-      product
-    )
-    .pipe(
-      tap((p) => {
-        this.fakeProduct.filter((s) => {
-          s.id !== id;
-        });
-        card.style.display = 'none';
-        this.fakeProduct.push(p);
-      })
-    );
-  }
-
   deleteFakeProduct(id: number) {
     const card = document.getElementById('card' + id) as HTMLElement;
     return this.http
       .delete<fakeStoreApi>('https://fakestoreapi.com/products/' + id)
       .pipe(
         tap(() => {
-          this.fakeProduct.filter((s) => {
-            s.id !== id;
-          });
-          card.style.display = 'none'
+          // this.fakeProduct = this.fakeProduct.filter((s) => {
+          //   console.log('s', s)
+          //   console.log('id', id);
+          //   s.id !== id;
+          // });
+          this.fakeProduct.filter((s) => s.id !== id);
+          card.style.display = 'none';
         })
       );
   }

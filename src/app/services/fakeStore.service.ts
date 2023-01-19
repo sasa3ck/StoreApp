@@ -24,7 +24,7 @@ export class FakeStores {
       })
       .pipe(
         delay(1000),
-        retry(3),
+        // retry(3),
         catchError(this.errorHandler.bind(this)),
         tap((p) => (this.fakeProduct = p))
       );
@@ -36,7 +36,6 @@ export class FakeStores {
       .pipe(
         tap((p) => {
           this.fakeProduct.push(p);
-          console.log(this.fakeProduct);
         })
       );
   }
@@ -48,8 +47,6 @@ export class FakeStores {
       .pipe(
         tap(() => {
           // this.fakeProduct = this.fakeProduct.filter((s) => {
-          //   console.log('s', s)
-          //   console.log('id', id);
           //   s.id !== id;
           // });
           this.fakeProduct.filter((s) => s.id !== id);

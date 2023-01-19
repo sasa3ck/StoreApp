@@ -47,8 +47,6 @@ export class AboutComponent implements OnInit, AfterViewInit {
     },
   ];
 
-  constructor() {}
-
   ngAfterViewInit(): void {
     let imgBx = document.querySelectorAll('.imgBx');
     let contentBx = document.querySelectorAll('.contentBx');

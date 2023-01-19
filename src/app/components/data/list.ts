@@ -1,6 +1,6 @@
 import { localList } from "../models/list";
 
-export const list: localList[] = [
+export const data: localList[] = [
   {
     id: 1,
     name: 'Alex Djuzepe',

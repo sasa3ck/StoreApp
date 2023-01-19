@@ -9,8 +9,8 @@
       <div class="box">
         <h3>Popular List</h3>
         <app-local-list
-          *ngFor="let lItem of list; let i = index"
-          [localList]="lItem"
+          *ngFor="let item of lists; let i = index"
+          [localList]="item"
         ></app-local-list>
       </div>
     </div>

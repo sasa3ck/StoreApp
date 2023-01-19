@@ -85,7 +85,7 @@
     transition: .5s
     @include Besley_500
   & input:focus ~ span, textarea:focus ~ span, input:valid ~ span, textarea:valid ~ span
-    color: #e91e63
+    color: $orange
     font-size: 0.9em
     transform: translateY(-20px)
   & input:focus, textarea:focus, input:valid, textarea:valid
@@ -110,7 +110,6 @@
     border: none !important
     z-index: 1
     &:hover
-      letter-spacing: 0.25em
       box-shadow: 0 0 35px $orange
       border: 2px solid $orange !important
       color: $orange
@@ -150,11 +149,11 @@
   &:hover i::before
     left: 0%
     transform: translateX(-50%) rotate(45deg)
-    box-shadow: 34px 34px $orange
+    box-shadow: 41px 39px $orange
   &:hover i::after
     left: 100%
     transform: translateX(-50%) rotate(-45deg)
-    box-shadow: 34px -34px $orange
+    box-shadow: 41px -39px $orange
 
 .connect-with-us
   & ul

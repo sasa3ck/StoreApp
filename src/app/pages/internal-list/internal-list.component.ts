@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { list as data } from 'src/app/components/data/list';
+import { data } from 'src/app/components/data/list';
 import { localList } from 'src/app/components/models/list';
 
 @Component({
@@ -8,11 +8,9 @@ import { localList } from 'src/app/components/models/list';
   styleUrls: ['./internal-list.component.sass'],
 })
 export class InternalListComponent implements OnInit {
-  list: localList[] = data;
-
+  lists: localList[] = data;
   vi_pie: string = 'assets/local-img/vi-pie.png';
 
-  constructor() {}
   ngOnInit(): void {
     document.getElementById('arrow-up')!.style.display = 'flex';
   }

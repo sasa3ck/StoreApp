@@ -9,6 +9,5 @@ import { localList } from '../models/list';
 export class LocalListComponent implements OnInit {
   @Input() localList: localList;
 
-  constructor() {}
   ngOnInit(): void {}
 }

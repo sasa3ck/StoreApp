@@ -21,16 +21,16 @@
         <div
           class="imgBx"
           *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]"
-          style="--i: {{ +item }}"
+          style="--i: {{ + item }}"
         >
-          <img src="assets/about-img/a{{ +item }}.jpg" />
+          <img src="assets/about-img/a{{ + item }}.jpg" />
         </div>
       </div>
       <div class="content">
-        <div class="contentBx" *ngFor="let i of items" id="content{{ +i.id }}">
+        <div class="contentBx" *ngFor="let i of items" id="content{{ + i.id }}">
           <div class="card">
             <div class="imgBox">
-              <img src="assets/about-img/a{{ +i.id }}.jpg" />
+              <img src="assets/about-img/a{{ + i.id }}.jpg" />
             </div>
             <div class="textBx">
               <h2 class="text-center">
@@ -58,11 +58,11 @@
     </div>
     <div class="lg-content">
       <div class="mx-auto mt-5">
-        <div *ngFor="let i of items" id="content{{ +i.id }}">
+        <div *ngFor="let i of items" id="content{{ + i.id }}">
           <div class="flex justify-center items-center m-2">
             <div class="relative w-[150px] h-[150px]">
               <img
-                src="assets/about-img/a{{ +i.id }}.jpg"
+                src="assets/about-img/a{{ + i.id }}.jpg"
                 class="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
               />
             </div>
